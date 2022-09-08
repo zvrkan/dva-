@@ -1,0 +1,31 @@
+<?php
+
+- ovo je riješenje; ????????
+0|5
+1|4
+2|3
+3|2
+4|1
+
+$a = array(5,4,3,2,1);
+
+$b = array();
+
+foreach($a as $key => $val)
+{
+    $b[$key]["broj"] = $val;
+}
+
+foreach($b as $key => $val)
+{
+    echo $key;
+    echo "|";
+    foreach($val as $k => $v)
+    {
+        echo $v;
+        echo "\n";
+    }
+}
+
+
+?>
