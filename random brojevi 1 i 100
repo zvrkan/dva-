@@ -1,0 +1,39 @@
+<?php
+/*
+Napišite program koji generira deset slučajnih brojeva između 1 i 100 i 
+smješta ih u polje. 
+Nakon toga, izračunajte prosjek tih brojeva 
+pa prepišite sve brojeve veće od ili jednake prosjeku u novu listu A, 
+a manje brojeve od prosjeka u novu listu B. 
+Ispišite sve brojeve iz 
+obje liste.
+*/
+
+for($i = 0; $i < 10; $i ++)
+{
+    $polje[$i] = rand(1, 100);
+
+} 
+   print_r($polje);
+
+$prosjek = array_sum($polje)/count($polje);
+echo $prosjek;
+
+
+for($i = 0; $i < 10; $i ++)
+{
+
+    if($polje[$i] >= $prosjek)
+    {
+        $A[] = $polje[$i];
+    }
+    if($polje[$i] < $prosjek)
+    {
+        $B[] = $polje[$i];
+    }
+} 
+
+print_r($A);
+print_r($B);
+
+?>
