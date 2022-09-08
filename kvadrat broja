@@ -1,0 +1,37 @@
+<?php
+
+/*  Program koji od korisnika učitava pet brojeva, zatim korisnik unosi još jedan 
+    broj te program mora ispisati je li kvadrat tog broja element polja ili ne.
+    Npr: ako je polje(25, 35, 45, 55) i uzmemo broj 5. Kvadrat broja 5 se nalazi u polju
+    ili Kvadrat broja 7 se ne nalazi u polju.
+*/
+
+$polje = array();
+
+for($i=1; $i<=5; $i++)
+{
+    $broj=readline("Unesite $i. broj: ");
+
+    $polje[$i] = $broj;
+    
+}
+
+//print_r($polje);
+
+$broj2 = readline("unesite još jedan broj: ");
+$kvadrat = $broj2*$broj2;
+
+foreach($polje as $i => $broj3)
+{
+    if($broj3 == $kvadrat)
+    {
+        echo "Kvadrat broja" . " " . $broj2 . " " . "nalazi se u polju";
+    }
+    else
+    {
+        echo "Kvadrat broja" . " " . $broj2 . " " . "ne nalazi se u polju";
+    }
+  
+}
+
+?>
