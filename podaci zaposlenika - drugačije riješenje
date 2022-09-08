@@ -1,0 +1,47 @@
+<?php
+
+$a = array();
+
+for($i=1;$i<=5;$i++)
+{
+    $b = readline("Upisite ime $i. zaposlenika: ");
+    $c = readline("Upisite prezime $i. zaposlenika: ");
+    $d = readline("Upisite placu $i. zaposlenika: ");
+
+    $a[$i]["ime"]=$b;
+    $a[$i]["prezime"]=$c;
+    $a[$i]["placa"]=$d;
+}
+
+$e = readline("Upisite ime/prezime zaposlenika za pregled: ");
+$f = 0;
+foreach($a as $key => $val)
+{
+    foreach($val as $k => $v)
+    {
+        if($e == $v)
+        {
+           $f = 25;         
+        }
+        if($k == "placa")
+        {
+            if($f == 25)
+            {
+                $f = $v;
+            }
+        }
+    }
+}
+
+if($f > 0)
+{
+    echo "Njegova placa je $f."; 
+}
+else
+{
+    echo "Taj zaposlenik ne postoji";
+}
+
+
+
+?>
