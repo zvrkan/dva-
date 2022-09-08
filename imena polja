@@ -1,0 +1,29 @@
+<?php
+
+$a = array();
+$b = array();
+
+for($i=1;$i<=5;$i++)
+{
+    $c = readline("Upisite $i. ime:");
+
+    $a[$i]=$c;
+}
+
+foreach($a as $key => $val)
+{
+    if(strpos($val,"a"))
+    {
+        $b[] = $val;
+    }
+    else
+    {}
+}
+foreach($b as $key => $val)
+{
+    echo $val;
+    echo "\n";
+}
+
+
+?>
