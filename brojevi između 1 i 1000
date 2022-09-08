@@ -1,0 +1,36 @@
+<?php
+
+/* zadatak-03
+
+   Napiši program koji će tražiti od korisnika da unese 5 puta broj između 1 i 100.
+   Ako korisnik unese broj koji nije u zadanim granicama, treba ispisati poruku: "Molim unesite broj između 1 i 100: " te korisnik mora moći ponovno unijeti broj.
+   Korisnik završava s unosom brojeva kada je unio točno pet brojeva u zadanim granicama.
+   
+   Potom treba ispisati koji je najveći, a koji najmanji od unesenih brojeva, te koji su po redu to bili uneseni brojevi (primjerice, broj 91 je najveći broj koji je korisnik unio, a unio ga je kao treći broj).
+   
+   Kako program treba raditi (primjer ispisa):
+   Unesite 1. broj (između 1 i 1000): 4
+   Unesite 2. broj (između 1 i 1000): 34
+   Unesite 3. broj (između 1 i 1000): 111
+   Molim unesite broj između 1 i 100: 11
+   Unesite 4. broj (između 1 i 1000): 91
+   Unesite 5. broj (između 1 i 1000): 55
+
+   Najveći uneseni broj je 91 i unesen je 4. po redu.
+   Najmanji uneseni broj je 4 i unesen je 1. po redu.
+*/
+$ucitani_broj = array();
+
+for($i=1; $i<=5; $i++)
+{
+   $ucitani_broj[] = readline("Unesite $i. broj izmedu 1 i 100: \n");  
+}
+
+   echo "Najveci ucitani broj je: " . max($ucitani_broj);
+
+   echo "\n";
+
+   echo "Najmanji ucitani broj je: " . min($ucitani_broj);
+
+
+?>
