@@ -1,0 +1,31 @@
+<?php
+
+/* Zadatak 23. (Bodova  za željenu razinu:  5)  Napišite program koji od korisnika učitava string i ispisuje je li 
+učitani string palindrom ili nije. Palindrom je antički naziv za dio teksta koji čitan od početka prema kraju ili obrnuto 
+glase jednako (primjerice: kisik, potop ...) Pretpostavite da će string biti unesen isključivo malim slovima te da u 
+stringu neće biti razmaka niti drugih posebnih znakova.
+*/
+
+$rijec = readline("Unesite rijec: ");
+
+function Palindrome($rijec)
+{ 
+    if (strrev($rijec) == $rijec)
+    { 
+        return 1; 
+    }
+    else
+    {
+        return 0;
+    }
+} 
+
+if(Palindrome($rijec))
+{ 
+    echo $rijec . " " . "je palindrom"; 
+}
+else 
+{ 
+    echo $rijec . " " .  "nije palindrom"; 
+}
+?>
