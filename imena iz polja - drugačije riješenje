@@ -1,0 +1,27 @@
+<?php
+
+/* Bodova  za minimalnu  razinu: 5)  Napišite program koji od korisnika učitava pet  imena  u  polje. 
+Neka program ispiše sva imena iz polja koja započinju slovom A. Primjerice, ako korisnik unese „Anna“, „Mary“, 
+„Pete“, „Bart“ i „Anastasia“, program treba ispisati: 
+ 
+Anna 
+Anastasia
+*/
+
+$imena = array();
+
+for($i = 1; $i<=5; $i++)
+{
+    $imena[] = readline("$i. ime: ");
+}
+
+//print_r($imena);
+
+foreach($imena as $v)
+{
+    if($v[0] == "A")
+    {
+        echo $v . "\n";
+    }
+}
+?>
