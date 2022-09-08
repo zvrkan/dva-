@@ -1,0 +1,24 @@
+<?php 
+/*
+Napišite program koji od korisnika učitava pet imena u polje. 
+Neka program ispiše sva imena iz polja koja započinju slovom A. 
+Primjerice, ako korisnik unese „Anna“, „Mary“, 
+„Pete“, „Bart“ i „Anastasia“, program treba ispisati: 
+Anna 
+Anastasia
+*/
+
+$imena = array("Ivan", "Marko", "ana", "Nemanja", "anastasija");
+for($i=0; $i < 5; $i++)
+{
+    echo substr($imena[$i], -1);
+    echo "\n";
+    if(substr($imena[$i], -1) == "a");
+    {
+        echo $imena[$i];
+        echo "\n";
+    }
+}
+
+
+?>
