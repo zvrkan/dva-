@@ -1,0 +1,33 @@
+<?php
+/*
+Napisite program koji u polje cijelih brojeva ucitava 5 brojeva od korisnika.
+Napravite novo polje i u njega prepisite sadrzaj prvog polja, ali obrnutim redosljedom
+Npr. 
+polje1 = 1,2,3,4,5
+polje2 = 5,4,3,2,1
+*/ 
+
+$polje_1 = array();
+$polje_2 = array();
+for ($i = 0; $i <= 4; $i++)
+{
+    $polje_1[$i] = (int)readline("Unesite broj: ");
+}
+for($k = 4; $k >= 0; $k--)
+{
+    $polje_2[] = $polje_1[$k];
+}
+//print_r($polje_1);
+//print_r($polje_2);
+echo "Polje 1: ";
+foreach ($polje_1 as $kljuc_1 => $broj_1)
+{
+    echo $broj_1 . ",";
+}
+echo "\n";
+echo "Polje 2: ";
+foreach ($polje_2 as $kljuc_2 => $broj_2)
+{
+    echo $broj_2 . ",";
+}
+?> 
