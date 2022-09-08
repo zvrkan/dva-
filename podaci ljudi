@@ -1,0 +1,29 @@
+<?php
+
+// traži podatke pa ih ispisuje
+
+$a = array();
+
+for($i = 1;$i<=5;$i++)
+{
+    $b = readline("Upisite $i ime: ");
+    $c = readline("Upisite $i. prezime ");
+    $d = readline("Upisite $i. telef. broj: ");
+
+    $a[$d]["ime"] = $b;
+    $a[$d]["prezime"]=$c;
+}
+
+foreach($a as $key => $val)
+{
+    echo $key;
+    echo "\n";
+
+    foreach($val as $k => $v)
+    {
+        echo $v;
+        echo " ";
+    }
+}
+
+?>
