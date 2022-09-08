@@ -1,0 +1,48 @@
+<?php
+
+/* Zadatak 22. (Bodova za minimalnu razinu: 6) Napišite program koji generira deset slučajnih brojeva između 
+1 i 100 i smješta ih u polje. Nakon toga, izračunajte prosjek tih brojeva pa prepišite sve brojeve veće od ili jednake 
+prosjeku u novu listu A, a manje brojeve od prosjeka u novu listu B. Ispišite sve brojeve iz obje liste.
+*/
+
+$a = rand(1,9);
+$b = rand(1,9);
+$c = rand(1,9);
+$d = rand(1,9);
+$e = rand(1,9);
+$f = rand(1,9);
+$g = rand(1,9);
+$h = rand(1,9);
+$i = rand(1,9);
+$j = rand(1,9);
+
+$brojevi = array($a,$b,$c,$d,$e,$f,$g,$h,$i,$j);
+
+$avg = array_sum($brojevi)/count($brojevi);
+echo  "Prosijek je :" . $avg . "\n";
+$veci = array();
+$manji = array();
+
+foreach($brojevi as $key => $val)
+{
+    if($val >= $avg)
+    {
+        $veci[] = $val;
+    }
+    else
+    {
+        $manji[] = $val;
+    }
+}
+echo "----|Ispis brojeva vecih od prosjeka|----\n";
+foreach($veci as $key => $val)
+{
+    echo $val . "\n";
+}
+echo "----|Ispis brojeva manjih od prosjeka|----\n";
+foreach($manji as $key => $val)
+{
+    echo $val . "\n";
+}
+
+?>
