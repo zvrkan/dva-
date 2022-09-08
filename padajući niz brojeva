@@ -1,0 +1,39 @@
+<?php
+ /*
+ Napisite program koji od korisnika ucitava brojeve sve dok korisnik to zeli. 
+ Kada je unoz zavrsen provjerite je li
+ uneseni niz brojeva padajuci. Uvijet da bi niz bio padajuci je da je svaki 
+ element manji ili jednak onom elementu tocno ispred
+ njega.
+ Npr. 7,6,5,4,12,3,2,1 nije padajuci
+ 96,15,15,15,6,3,1 je padajuci
+ */
+
+$brojevi = array();
+while(true)
+{
+    $unos = readline("Unesite broj (Za prekidanje unosa upisite Prekid): ");
+    if ($unos == "Prekid")
+    {
+        break;
+    }
+    $brojevi[] = $unos;
+}
+//print_r($brojevi);
+
+$prednji = $brojevi[0];
+
+foreach($brojevi as $kljuc => $broj)
+{
+    if($prednji >= $broj)
+    {
+        $prednji = $broj;
+    }
+    else
+    {
+        echo "Niz je rastuci.";
+        exit;
+    }
+}
+echo "Niz je padajuci.";
+?>
