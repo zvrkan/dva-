@@ -1,0 +1,67 @@
+Ucenik 0
+Ime: ana                                         
+Prezime: anic                                    
+Prosijek ocjena: 4,5                             
+Ucenik 1
+Ime: petar                                       
+Prezime: petric                                  
+Prosijek ocjena: 3,00                            
+Ucenik 2
+Ime: maja                                        
+Prezime: majic                                   
+Prosijek ocjena: 4,75                            
+ime       prezime     prosijek
+ana       anic             4,5
+petar     petric          3,00
+maja      majic           4,75
+
+<?php
+
+// primjer01.php
+
+$ucenici = array();
+
+for($i=0; $i<3; $i++)
+{
+    echo "Ucenik " . $i . "\n";
+
+    $ime = readline("Ime: ");
+    $prezime = readline("Prezime: ");
+    $prosijek = readline("Prosijek ocjena: ");
+
+    $ucenici[$i]["ime"] = $ime;
+    $ucenici[$i]["prezime"] = $prezime; 
+    $ucenici[$i]["prosijek"] = $prosijek;   
+}
+
+// print_r($ucenici);
+
+// echo $ucenici[1]["prezime"];
+
+printf("%-10s", "ime");
+printf("%-10s", "prezime");
+printf("%10s", "prosijek");
+echo "\n";
+
+foreach($ucenici as $key => $val)
+{
+    // echo $val["prezime"] . "\n";
+
+    foreach($val as $k => $v)
+    {
+        // echo $k . " = " . $v . " | ";
+
+        if($k == "prosijek")
+        {
+            printf("%10s", $v);
+        }
+        else
+        {
+            printf("%-10s", $v);
+        }        
+    }
+
+    echo "\n";
+}
+
+?>
