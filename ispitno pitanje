@@ -1,0 +1,30 @@
+<?php
+
+/*
+napišite program koji od korisnika učitava pet brojeva u polje.
+Nakon toga, učitajte od korisnika jedan broj te ispišite,
+nalazi li se kvadrat toga broja u poolju ili ne.
+Primjerice ako je poolje (10, 15, 20, 25, 30) i broj je 5,
+onda treba ispisati "kvadrat broja 5 se nalazi u polju".
+Za isto polje i broj 6 treba ispisati "kvadrat borja 6 se ne nalazi u polju".
+*/
+
+$arr = array();
+for($i=1;$i<=5;$i++)
+{
+    $arr[$i] = (int)readline("Upisite broj:");
+}
+
+$broj = (int)readline("upiite neki broj: ");
+$exp = 2;
+
+if(in_array(pow($broj,$exp), $arr))
+{
+    echo "kvadrat broja $broj nalazi se u polju";
+}
+else 
+{
+    echo "kvadrat broja $broj se ne nalazi u polju";
+}
+
+?>
