@@ -1,0 +1,52 @@
+<?php
+
+
+/*
+Napišite program i u njemu si zadajet dva polja od po 5 rojeva.
+Nakon toga. brojeve iz oba polja prebacite u listu, ali tako da svaki broj bude dodan u listu samo jednom
+(tj. da ne bude duplikat u list) 
+Na kraju ispišite sadržaj liste i ipišite koliko duplikata ste pronašli: 
+primjerice ako su polja[1, 2, 3, 4, 5] i [4, 4, 5, 6, 7] onda u listi treba biti [1, 2, 3, 4, 5, 6, 7] 
+i treba ispisati da su ponađena tri duplikata.
+*/
+
+$polje1 = array(1,2,3,4,5);
+$polje2 = array(4,4,5,6,7);
+$lista = array();
+
+$counter =  0;
+
+foreach($polje1 as $broj)
+{
+    if(!In_array($broj,$lista))
+    {
+        array_push($lista, $broj);  
+    }
+    else
+    {
+        $counter++;
+    }
+}
+
+foreach($polje2 as $broj)
+{
+    if(!In_array($broj,$lista))
+    {
+        array_push($lista, $broj);  
+    }
+    else
+    {
+        $counter++;
+    }
+}
+
+foreach($lista as $key)
+{
+    echo $key . "\n";
+}
+
+echo "pronađeno je $counter duplikata. ";
+
+
+
+?>
